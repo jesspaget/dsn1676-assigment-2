@@ -31,16 +31,67 @@ html {
     margin-right: auto;
 }
 
+.clock-face:target .hand-hour {
+    transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+    transform: rotate(4320deg);
+}
+
 .hand {
     width: 14px;
     position: absolute;
     right: calc(50% - 7px);
-    bottom: calc(50% - 7px);
+    bottom: 50%;
+    transition: all 6s linear;
+    transform-origin: bottom center;
 }
 
 .center {
     width: 28px;
     position: absolute;
-    top: calc(50% - 14px);
+    bottom: calc(50% - 14px);
     left: calc(50% - 14px);
+}
+
+.forwards {
+    background-color: green;
+    width: 7em;
+    line-height: 7em;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    transition: all .5s linear;
+}
+
+.forwards:hover {
+    background-color: white;
+    color: black;
+}
+
+.backwards {
+    background-color: red;
+    width: 7em;
+    line-height: 7em;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    transition: all .5s linear;
+}
+
+.backwards:hover {
+    background-color: white;
+    color: black;
+}
+
+.buttons {
+    text-align: center;
+    margin: 1rem;
 }
